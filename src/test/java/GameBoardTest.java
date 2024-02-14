@@ -28,7 +28,7 @@ public class GameBoardTest {
     @Test
     public void make_moveTest() {
 
-        //5 Good Weather Tests
+        // 5 Good Weather Tests
         assertTrue(gmb.make_move(1, 3));
         assertTrue(gmb.make_move(0, 5));
         assertTrue(gmb.make_move(2, 4));
@@ -36,16 +36,16 @@ public class GameBoardTest {
         assertTrue(gmb.make_move(4, 5));
         
         
-        //4 Bad Weather Tests
+        // 4 Bad Weather Tests
         assertThrows(IllegalArgumentException.class, ()->gmb.make_move(1, 6));
         assertThrows(IllegalArgumentException.class, ()->gmb.make_move(6, 1));
         assertThrows(IllegalArgumentException.class, ()->gmb.make_move(7, 0));
         assertThrows(IllegalArgumentException.class, ()->gmb.make_move(-2, -1));
         
         
-        //Testing Further Outside-range and Within-range Cases
-        //To Make Sure the User is Never Allowed to Make a Move Above or Below
-        //Board Range of Positions.
+        // Testing Further Outside-range and Within-range Cases
+        // To Make Sure the User is Never Allowed to Make a Move Above or Below
+        // Board Range of Positions.
 
         assertTrue(gmb.make_move(5,5));
         assertThrows(IllegalArgumentException.class, ()->gmb.make_move(6, 5));

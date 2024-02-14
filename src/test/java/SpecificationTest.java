@@ -15,7 +15,7 @@ class SpecificationTest {
         
         
         
-        //Testing HD
+        // Testing HD
         
         Specification.setDefinition(0);
         
@@ -26,17 +26,17 @@ class SpecificationTest {
          // Testing Starting Point of Display
         () ->assertTrue(Specification.insideDisplayArea(0, 0)),
         
-        //Testing Edge Point of Disply
+        // Testing Edge Point of Disply
         
         ()->assertTrue(Specification.insideDisplayArea(1280, 720)),
         
-        //Testing Pixels within the Range of Pixels
+        // Testing Pixels within the Range of Pixels
         
         () ->assertFalse(Specification.insideDisplayArea(1280, 300)),
         () ->assertFalse(Specification.insideDisplayArea(900, 720)),
         () ->assertTrue(Specification.insideDisplayArea(900, 300)),
         
-        //Testing Negative Point Outside the Range of Pixels
+        // Testing Negative Point Outside the Range of Pixels
         
         () ->assertFalse(Specification.insideDisplayArea(1280, 720)),
         () ->assertFalse(Specification.insideDisplayArea(-1280, 720)),
@@ -44,7 +44,7 @@ class SpecificationTest {
         
         );
         
-        //Testing FHD
+        // Testing FHD
         
         Specification.setDefinition(1);
         
@@ -53,17 +53,17 @@ class SpecificationTest {
         
         ()->assertTrue(Specification.insideDisplayArea(0, 0)),
         
-        //Testing Edge Point of Disply
+        // Testing Edge Point of Disply
         
         ()->assertFalse(Specification.insideDisplayArea(1920, 1080)),
         
-        //Testing Pixels within the Range of Pixels
+        // Testing Pixels within the Range of Pixels
         
         ()->assertFalse(Specification.insideDisplayArea(1920, 720)),
         ()->assertFalse(Specification.insideDisplayArea(1280, 1080)),
         ()->assertTrue(Specification.insideDisplayArea(1280, 720)),
         
-        //Testing Negative Point Outside the Range of Pixels
+        // Testing Negative Point Outside the Range of Pixels
         
         ()->assertFalse(Specification.insideDisplayArea(1920, -1080)),
         ()->assertFalse(Specification.insideDisplayArea(-1920, 1080)),
@@ -79,7 +79,7 @@ class SpecificationTest {
         assertAll("",
                 
                 
-        //Testing combinations of chars and numbers within and outside range
+        // Testing combinations of chars and numbers within and outside range
                 
         ()->assertTrue(Specification.messageIsValid("abcdef", true)),
         
@@ -98,7 +98,7 @@ class SpecificationTest {
         ()->assertFalse(Specification.messageIsValid("a", false)),
         
         
-        //Testing combinations of numbers within and outside range
+        // Testing combinations of numbers within and outside range
         
         ()->assertFalse(Specification.messageIsValid("555555", true)),
         
@@ -110,7 +110,7 @@ class SpecificationTest {
         
         ()->assertFalse(Specification.messageIsValid("", true)),
         
-        //Testing more combinations of chars and numbers within and outside range
+        // Testing more combinations of chars and numbers within and outside range
         
         ()->assertTrue(Specification.messageIsValid("555abc", true)),
         
@@ -125,7 +125,7 @@ class SpecificationTest {
         
         ()->assertFalse(Specification.messageIsValid("", false)),
         
-        //Testing with hyphen with combinations of numbers and chrs
+        // Testing with hyphen with combinations of numbers and chrs
         
         ()->assertTrue(Specification.messageIsValid("abcde-f", false)),
         
@@ -139,7 +139,7 @@ class SpecificationTest {
         
         ()->assertFalse(Specification.messageIsValid("a33de-fg", true)),
         
-        //Testing above range of chars or number only
+        // Testing above range of chars or number only
         
         ()->assertFalse(Specification.messageIsValid("abcdefg", false)),
         
