@@ -19,7 +19,7 @@ public class RomanNumeral {
         map.put('M', 1000);
     }
 
-    //The code below has been updated to be as simplified as possible and to pass only given test cases in the RomanNumeralsTest.java
+    // The code below has been updated to be as simplified as possible and to pass only given test cases in the RomanNumeralsTest.java
 
     public static int convert(String s) throws IllegalArgumentException {
 
@@ -30,7 +30,8 @@ public class RomanNumeral {
         int convertedNumber = 0;
 
         ArrayList<Integer> sums = new ArrayList<>();
-        //Checking for invalid chars.
+
+        // Checking for invalid chars.
 
         for (int i = 0; i < s.length(); i++) {
 
