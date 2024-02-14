@@ -1,0 +1,15 @@
+Title: Bug Fix for Specification.java File.
+Submitter: Bashar Jirjees
+email address: basharjirjees@uvic.ca
+
+Summary of bug:Fixed issue where licence plates with 7 or more chars/number without any whitespaces or hyphens were considered valid which is wrong. The code is fixed to consider them non-valid.
+
+Expected behaviour: returning false
+
+Actual behaviour: returning true (before fixture)
+
+Steps to Reproduce: Added one conditional check to force such licence plates to be considered non-valid before starting with other checkups. The condition added is: 
+
+"if (input.length() >= 7 && !input.contains(" ") && !input.contains("-")) return false;"
+
+Severity: Meduim
