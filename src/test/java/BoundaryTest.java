@@ -127,6 +127,10 @@ class BoundaryTest {
         
         assertEquals("B", Boundary.percentageToLetterGrade(75.0));
 
+        
+        // Testing with 0 to check correctness of execution
+        
+        assertEquals("F", Boundary.percentageToLetterGrade(0.0));
 
         // Testing below the boundary 0
         
